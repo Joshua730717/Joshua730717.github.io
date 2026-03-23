@@ -1,1 +1,362 @@
-<!DOCTYPE html><html lang='zh-Hant'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>StoryARK｜策略儀表板</title><script src='https://cdn.tailwindcss.com'></script><script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script><script>tailwind.config={theme:{extend:{colors:{story:{50:'#f4faf7',100:'#e5f3ec',300:'#9ed0b5',500:'#438f68',700:'#265d42',900:'#163728'}}}}}</script><style>html{scroll-behavior:smooth}body{background:linear-gradient(180deg,#f7fbf8 0%,#eef6f1 100%)}.card{background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.8);box-shadow:0 12px 28px rgba(18,58,40,.08)}.chart{height:320px}</style></head><body class='text-slate-800 antialiased'><header class='sticky top-0 z-40 border-b border-white/70 bg-white/80 backdrop-blur'><div class='mx-auto flex max-w-7xl items-center justify-between px-4 py-4'><div><div class='text-xs font-semibold uppercase tracking-[.24em] text-story-700'>StoryARK Dashboard</div><div class='text-base font-semibold text-story-900'>故事方舟 × 品牌策略可視化</div></div><nav class='hidden gap-5 text-sm text-slate-600 md:flex'><a href='#overview'>總覽</a><a href='#roles'>角色</a><a href='#products'>產品</a><a href='#strategy'>策略</a></nav></div></header><section id='overview'><div class='mx-auto max-w-7xl px-4 py-16'><div class='grid gap-8 lg:grid-cols-[1.1fr_.9fr]'><div><div class='mb-3 inline-flex rounded-full bg-story-100 px-4 py-1 text-sm font-semibold text-story-700'>互動劇場 × 英語表達 × SEL × 故事療癒</div><h1 class='text-4xl font-bold tracking-tight text-story-900 sm:text-5xl'>StoryARK 的品牌、內容、課程、合作與成長節奏，整理成一個可提案、可展示、可部署的互動式入口。</h1><p class='mt-6 max-w-3xl text-lg leading-8 text-slate-600'>這是一個官網首頁雛形：用資料圖表說明我們是誰、怎麼運作、為什麼值得合作。</p></div><div class='card rounded-3xl p-6'><div class='grid gap-4 sm:grid-cols-2'><div class='rounded-2xl bg-story-50 p-5'><div class='text-sm text-slate-500'>內容產品線</div><div class='mt-2 text-3xl font-bold text-story-900'>8+</div></div><div class='rounded-2xl bg-story-50 p-5'><div class='text-sm text-slate-500'>跨域角色模組</div><div class='mt-2 text-3xl font-bold text-story-900'>6</div></div><div class='rounded-2xl bg-story-50 p-5'><div class='text-sm text-slate-500'>合作區域</div><div class='mt-2 text-3xl font-bold text-story-900'>台灣＋中國</div></div><div class='rounded-2xl bg-story-50 p-5'><div class='text-sm text-slate-500'>品牌核心</div><div class='mt-2 text-3xl font-bold text-story-900'>教育 × 劇場 × 故事</div></div></div></div></div></div></section><section id='roles' class='mx-auto max-w-7xl px-4 py-8'><div class='mb-6 max-w-3xl'><div class='text-sm font-semibold uppercase tracking-[.2em] text-story-700'>Participants</div><h2 class='mt-2 text-3xl font-bold text-story-900'>參與者與角色分析</h2><p class='mt-3 leading-8 text-slate-600'>品牌策展、演教員師訓、技術統籌、市場合作與教材出版，共同組成 StoryARK 的執行系統。</p></div><div class='card rounded-3xl p-5'><div id='rolesChart' class='chart'></div></div></section><section id='products' class='mx-auto max-w-7xl px-4 py-8'><div class='mb-6 max-w-3xl'><div class='text-sm font-semibold uppercase tracking-[.2em] text-story-700'>Products</div><h2 class='mt-2 text-3xl font-bold text-story-900'>產品與主題結構</h2><p class='mt-3 leading-8 text-slate-600'>以教育劇場為引擎，向教案、師訓、出版、成人互動體驗與授權顧問延伸。</p></div><div class='grid gap-6 lg:grid-cols-2'><div class='card rounded-3xl p-5'><div id='themeChart' class='chart'></div></div><div class='card rounded-3xl p-5'><div id='productChart' class='chart'></div></div></div></section><section id='strategy' class='mx-auto max-w-7xl px-4 py-8'><div class='mb-6 max-w-3xl'><div class='text-sm font-semibold uppercase tracking-[.2em] text-story-700'>Strategy</div><h2 class='mt-2 text-3xl font-bold text-story-900'>成長軌跡與合作策略</h2><p class='mt-3 leading-8 text-slate-600'>先試點、再標準化、再複製，是 StoryARK 的擴張方式。</p></div><div class='grid gap-6 lg:grid-cols-2'><div class='card rounded-3xl p-5'><div id='timelineChart' class='chart'></div></div><div class='card rounded-3xl p-5'><div id='investmentChart' class='chart'></div></div></div><div class='mt-6 grid gap-4 md:grid-cols-3'><div class='card rounded-3xl p-5'><h3 class='text-lg font-semibold text-story-900'>合作敘事</h3><p class='mt-2 text-slate-600'>網站要說清楚合作類型、導入方式與交付模組。</p></div><div class='card rounded-3xl p-5'><h3 class='text-lg font-semibold text-story-900'>授權邏輯</h3><p class='mt-2 text-slate-600'>教材、劇本、師訓與現場支援可拆分為不同合作層級。</p></div><div class='card rounded-3xl p-5'><h3 class='text-lg font-semibold text-story-900'>治理要求</h3><p class='mt-2 text-slate-600'>兒少安全、跨境授權、師資品質與品牌一致性是關鍵。</p></div></div></section><footer class='mx-auto max-w-7xl px-4 py-12 text-sm text-slate-500'><div class='card rounded-3xl p-6'><div class='font-semibold text-story-900'>StoryARK 故事方舟</div><p class='mt-2 leading-7'>此版本已可作為 GitHub Pages 的首頁雛形，後續可再接代表作品、合作方案與聯絡入口。</p></div></footer><script>const rolesChart=echarts.init(document.getElementById('rolesChart'));rolesChart.setOption({tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},grid:{left:90,right:20,top:10,bottom:20},xAxis:{type:'value'},yAxis:{type:'category',data:['品牌策展','演教員 / 師訓','技術統籌','市場合作','出版教材','顧問網絡']},series:[{type:'bar',data:[1,4,2,3,3,2],barWidth:18,itemStyle:{borderRadius:[0,8,8,0],color:'#2f7451'}}]});const themeChart=echarts.init(document.getElementById('themeChart'));themeChart.setOption({tooltip:{trigger:'axis'},grid:{left:45,right:20,top:20,bottom:55},xAxis:{type:'category',data:['互動劇場','英語表達','SEL','故事療癒','教師培訓','出版教材','品牌授權'],axisLabel:{interval:0,rotate:22}},yAxis:{type:'value',max:100},series:[{type:'bar',data:[92,88,85,81,79,76,72],itemStyle:{color:'#69b18a',borderRadius:[8,8,0,0]}}]});const productChart=echarts.init(document.getElementById('productChart'));productChart.setOption({tooltip:{trigger:'item'},legend:{bottom:0},series:[{type:'pie',radius:['42%','68%'],data:[{name:'教育劇場',value:34},{name:'教案 / 講義',value:21},{name:'師訓營隊',value:18},{name:'出版內容',value:11},{name:'成人互動體驗',value:9},{name:'授權 / 顧問',value:7}]}]});const timelineChart=echarts.init(document.getElementById('timelineChart'));timelineChart.setOption({tooltip:{trigger:'axis'},grid:{left:40,right:20,top:20,bottom:40},xAxis:{type:'category',data:['2024 Q4','2025 Q1','2025 Q2','2025 Q3','2025 Q4','2026 Q1']},yAxis:{type:'value',max:100},series:[{type:'line',smooth:true,data:[28,41,55,63,74,86],symbolSize:10,lineStyle:{width:4,color:'#2f7451'},itemStyle:{color:'#214b37'},areaStyle:{color:'rgba(105,177,138,0.18)'}}]});const investmentChart=echarts.init(document.getElementById('investmentChart'));investmentChart.setOption({tooltip:{},radar:{radius:'62%',indicator:[{name:'高複製性',max:100},{name:'品牌辨識度',max:100},{name:'跨城合作',max:100},{name:'師訓門檻',max:100},{name:'IP延伸',max:100},{name:'商模清晰度',max:100}]},series:[{type:'radar',data:[{value:[87,91,84,73,89,78],name:'StoryARK'}],areaStyle:{color:'rgba(67,143,104,0.25)'},lineStyle:{color:'#2f7451'},itemStyle:{color:'#214b37'}}]});window.addEventListener('resize',()=>[rolesChart,themeChart,productChart,timelineChart,investmentChart].forEach(c=>c.resize()));</script></body></html>
+<!DOCTYPE html>
+<html lang='zh-Hant'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>StoryARK 故事方舟｜教育劇場・英語表達・SEL</title>
+  <meta name='description' content='StoryARK 故事方舟：以互動劇場、英語表達、SEL 與故事療癒，打造可合作、可授權、可培訓的教育品牌。' />
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            story: {
+              50:'#f4faf7',100:'#e5f3ec',200:'#c7e5d4',300:'#9ed0b5',400:'#73b38f',500:'#438f68',600:'#347654',700:'#265d42',800:'#1d4934',900:'#163728'
+            }
+          },
+          boxShadow: {
+            soft:'0 16px 40px rgba(22,55,40,.10)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{background:linear-gradient(180deg,#f8fbf9 0%,#edf6f0 42%,#f8fbf9 100%)}
+    .glass{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7)}
+    .section-title{letter-spacing:.18em}
+    .chart{height:320px}
+    .hero-orb{position:absolute;border-radius:9999px;filter:blur(16px);opacity:.24;pointer-events:none}
+  </style>
+</head>
+<body class='text-slate-800 antialiased'>
+  <div class='hero-orb left-[-4rem] top-20 h-48 w-48 bg-story-300'></div>
+  <div class='hero-orb right-10 top-44 h-32 w-32 bg-emerald-200'></div>
+
+  <header class='sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl'>
+    <div class='mx-auto flex max-w-7xl items-center justify-between px-4 py-4'>
+      <a href='#top' class='flex items-center gap-3'>
+        <div class='flex h-11 w-11 items-center justify-center rounded-2xl bg-story-700 text-lg font-bold text-white shadow-soft'>SA</div>
+        <div>
+          <div class='text-xs font-semibold uppercase tracking-[.24em] text-story-700'>StoryARK</div>
+          <div class='text-sm font-semibold text-story-900'>故事方舟 Story & Theatre Education</div>
+        </div>
+      </a>
+      <nav class='hidden items-center gap-6 text-sm text-slate-600 md:flex'>
+        <a href='#about' class='hover:text-story-700'>品牌定位</a>
+        <a href='#works' class='hover:text-story-700'>代表作品</a>
+        <a href='#system' class='hover:text-story-700'>課程系統</a>
+        <a href='#cooperate' class='hover:text-story-700'>合作方式</a>
+        <a href='#contact' class='hover:text-story-700'>聯絡入口</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id='top'>
+    <section class='relative overflow-hidden'>
+      <div class='mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-[1.08fr_.92fr] lg:py-24'>
+        <div class='flex flex-col justify-center'>
+          <div class='mb-4 inline-flex w-fit rounded-full bg-story-100 px-4 py-1.5 text-sm font-semibold text-story-700'>互動劇場 × 英語表達 × SEL × 故事療癒</div>
+          <h1 class='max-w-4xl text-4xl font-bold leading-tight tracking-tight text-story-900 sm:text-5xl lg:text-6xl'>讓故事不只被閱讀，<br class='hidden sm:block'/>而是被看見、被說出、被活出來。</h1>
+          <p class='mt-6 max-w-3xl text-lg leading-8 text-slate-600'>StoryARK 故事方舟是一個融合教育劇場、英語教學、情緒教育與敘事陪伴的品牌系統。從兒童課程到教師培訓，從現場演出到教材出版，我們把「故事」做成一套可以感受、學習、複製與合作的教育方法。</p>
+          <div class='mt-8 flex flex-wrap gap-4'>
+            <a href='#cooperate' class='rounded-2xl bg-story-700 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-story-800'>查看合作方案</a>
+            <a href='#works' class='rounded-2xl border border-story-200 bg-white px-6 py-3 text-sm font-semibold text-story-700 transition hover:border-story-400'>瀏覽代表作品</a>
+          </div>
+          <div class='mt-10 grid gap-4 sm:grid-cols-3'>
+            <div class='glass rounded-3xl p-5 shadow-soft'>
+              <div class='text-xs uppercase tracking-[.22em] text-slate-500'>Focus</div>
+              <div class='mt-3 text-2xl font-bold text-story-900'>4 大主軸</div>
+              <p class='mt-2 text-sm leading-6 text-slate-600'>戲劇、語言、情緒、故事整合</p>
+            </div>
+            <div class='glass rounded-3xl p-5 shadow-soft'>
+              <div class='text-xs uppercase tracking-[.22em] text-slate-500'>Modules</div>
+              <div class='mt-3 text-2xl font-bold text-story-900'>多模組</div>
+              <p class='mt-2 text-sm leading-6 text-slate-600'>課程、演出、師訓、教材、授權</p>
+            </div>
+            <div class='glass rounded-3xl p-5 shadow-soft'>
+              <div class='text-xs uppercase tracking-[.22em] text-slate-500'>Use Cases</div>
+              <div class='mt-3 text-2xl font-bold text-story-900'>校園＋品牌</div>
+              <p class='mt-2 text-sm leading-6 text-slate-600'>兒童教育、成人互動、B2B 合作</p>
+            </div>
+          </div>
+        </div>
+
+        <div class='glass rounded-[2rem] p-5 shadow-soft'>
+          <div class='rounded-[1.5rem] bg-gradient-to-br from-story-800 via-story-700 to-story-500 p-6 text-white'>
+            <div class='text-sm uppercase tracking-[.24em] text-story-100/80'>Brand Narrative</div>
+            <h2 class='mt-3 text-2xl font-bold leading-tight'>從一艘小船，長成一套能被帶進教室、舞台與人生現場的故事系統。</h2>
+            <p class='mt-4 leading-7 text-white/85'>首頁不只是展示，而是提案：說清楚你是誰、做什麼、怎麼合作、為何值得長期投入。</p>
+          </div>
+          <div class='mt-5 grid gap-4 md:grid-cols-2'>
+            <div class='rounded-3xl bg-story-50 p-5'>
+              <div class='text-sm font-semibold text-story-700'>適合對象</div>
+              <ul class='mt-3 space-y-2 text-sm leading-6 text-slate-600'>
+                <li>幼兒園／安親班／學校</li>
+                <li>教育品牌與內容合作方</li>
+                <li>需要師訓與教案系統的單位</li>
+                <li>尋找沉浸式體驗的文化場域</li>
+              </ul>
+            </div>
+            <div class='rounded-3xl bg-story-50 p-5'>
+              <div class='text-sm font-semibold text-story-700'>合作入口</div>
+              <ul class='mt-3 space-y-2 text-sm leading-6 text-slate-600'>
+                <li>課程導入與派師</li>
+                <li>演出授權與移動版配置</li>
+                <li>教材出版與品牌聯名</li>
+                <li>演教員培訓與顧問陪跑</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id='about' class='mx-auto max-w-7xl px-4 py-10 lg:py-14'>
+      <div class='mb-8 max-w-3xl'>
+        <div class='section-title text-sm font-semibold uppercase text-story-700'>Brand Positioning</div>
+        <h2 class='mt-3 text-3xl font-bold text-story-900 lg:text-4xl'>品牌不是一場活動，而是一套可以被複製的教育敘事系統。</h2>
+        <p class='mt-4 text-base leading-8 text-slate-600'>StoryARK 的價值，在於把「故事」從內容提升成方法，從單次演出提升成可長期合作的品牌架構。</p>
+      </div>
+      <div class='grid gap-5 md:grid-cols-2 xl:grid-cols-4'>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-lg font-semibold text-story-900'>教育劇場</div>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>用角色、場景與互動，讓孩子從參與中學習，而不只是聽講。</p>
+        </article>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-lg font-semibold text-story-900'>英語表達</div>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>把口說與表達力放進故事節奏裡，讓語言更有情境與動機。</p>
+        </article>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-lg font-semibold text-story-900'>SEL 情緒教育</div>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>透過角色感受、提問與回應，讓情緒被辨識，也被安放。</p>
+        </article>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-lg font-semibold text-story-900'>故事療癒</div>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>不只教孩子，也陪大人理解生命敘事、角色轉化與內在修復。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id='works' class='mx-auto max-w-7xl px-4 py-10 lg:py-14'>
+      <div class='mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between'>
+        <div class='max-w-3xl'>
+          <div class='section-title text-sm font-semibold uppercase text-story-700'>Featured Works</div>
+          <h2 class='mt-3 text-3xl font-bold text-story-900 lg:text-4xl'>代表作品與內容模組</h2>
+          <p class='mt-4 leading-8 text-slate-600'>從兒童教育劇場到成人互動體驗，StoryARK 把作品做成可延展的品牌資產。</p>
+        </div>
+        <div class='rounded-2xl bg-story-50 px-4 py-3 text-sm font-medium text-story-700'>可延伸為：演出 / 教案 / 師訓 / 出版 / 授權</div>
+      </div>
+      <div class='grid gap-5 lg:grid-cols-2'>
+        <article class='glass rounded-[2rem] p-6 shadow-soft'>
+          <div class='inline-flex rounded-full bg-story-100 px-3 py-1 text-xs font-semibold text-story-700'>Flagship Performance</div>
+          <h3 class='mt-4 text-2xl font-bold text-story-900'>海盜傳奇 The Pirate Legend</h3>
+          <p class='mt-3 leading-8 text-slate-600'>以冒險、角色選擇與任務驅動為核心，讓孩子在故事中練習表達、合作與情緒辨識。</p>
+        </article>
+        <article class='glass rounded-[2rem] p-6 shadow-soft'>
+          <div class='inline-flex rounded-full bg-story-100 px-3 py-1 text-xs font-semibold text-story-700'>English Theatre</div>
+          <h3 class='mt-4 text-2xl font-bold text-story-900'>Show On × Stage Up</h3>
+          <p class='mt-3 leading-8 text-slate-600'>把英語讀說唱演讀整合成階段式模組，兼具內容、教學與品牌複製潛力。</p>
+        </article>
+        <article class='glass rounded-[2rem] p-6 shadow-soft'>
+          <div class='inline-flex rounded-full bg-story-100 px-3 py-1 text-xs font-semibold text-story-700'>Story Healing</div>
+          <h3 class='mt-4 text-2xl font-bold text-story-900'>故事療癒 × 生命敘事</h3>
+          <p class='mt-3 leading-8 text-slate-600'>將故事、角色與自我覺察結合，延伸至成人陪伴、講座、工作坊與出版內容。</p>
+        </article>
+        <article class='glass rounded-[2rem] p-6 shadow-soft'>
+          <div class='inline-flex rounded-full bg-story-100 px-3 py-1 text-xs font-semibold text-story-700'>Training & IP</div>
+          <h3 class='mt-4 text-2xl font-bold text-story-900'>師訓系統 × 授權模組</h3>
+          <p class='mt-3 leading-8 text-slate-600'>從教學法、角色訓練到現場派師與品質治理，讓合作方能落地、穩定、長期運作。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id='system' class='mx-auto max-w-7xl px-4 py-10 lg:py-14'>
+      <div class='mb-8 max-w-3xl'>
+        <div class='section-title text-sm font-semibold uppercase text-story-700'>System Map</div>
+        <h2 class='mt-3 text-3xl font-bold text-story-900 lg:text-4xl'>用圖表，看見內容、角色與成長節奏</h2>
+        <p class='mt-4 leading-8 text-slate-600'>以下圖表為品牌敘事版的視覺化示意，適合用在首頁、提案頁或合作簡報中。</p>
+      </div>
+      <div class='grid gap-6 xl:grid-cols-2'>
+        <div class='glass rounded-[2rem] p-5 shadow-soft'>
+          <div class='mb-3 text-lg font-semibold text-story-900'>內容模組聚焦分佈</div>
+          <div id='focusChart' class='chart'></div>
+        </div>
+        <div class='glass rounded-[2rem] p-5 shadow-soft'>
+          <div class='mb-3 text-lg font-semibold text-story-900'>執行系統角色結構</div>
+          <div id='roleChart' class='chart'></div>
+        </div>
+        <div class='glass rounded-[2rem] p-5 shadow-soft'>
+          <div class='mb-3 text-lg font-semibold text-story-900'>品牌成長路徑</div>
+          <div id='growthChart' class='chart'></div>
+        </div>
+        <div class='glass rounded-[2rem] p-5 shadow-soft'>
+          <div class='mb-3 text-lg font-semibold text-story-900'>合作成熟度地圖</div>
+          <div id='coopChart' class='chart'></div>
+        </div>
+      </div>
+    </section>
+
+    <section id='cooperate' class='mx-auto max-w-7xl px-4 py-10 lg:py-14'>
+      <div class='mb-8 max-w-3xl'>
+        <div class='section-title text-sm font-semibold uppercase text-story-700'>How We Work</div>
+        <h2 class='mt-3 text-3xl font-bold text-story-900 lg:text-4xl'>合作方式，從試點到長期共創</h2>
+        <p class='mt-4 leading-8 text-slate-600'>StoryARK 的擴張策略不是一次做大，而是先測試、再標準化、再複製。這也是合作最穩的路。</p>
+      </div>
+      <div class='grid gap-5 lg:grid-cols-4'>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-sm font-semibold text-story-700'>Step 01</div>
+          <h3 class='mt-3 text-xl font-bold text-story-900'>試點導入</h3>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>先從單校、單班、單場演出或小型課程開始，確認流程與現場回應。</p>
+        </article>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-sm font-semibold text-story-700'>Step 02</div>
+          <h3 class='mt-3 text-xl font-bold text-story-900'>模組標準化</h3>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>整理教案、派師、培訓、成本、分潤與品牌使用規格。</p>
+        </article>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-sm font-semibold text-story-700'>Step 03</div>
+          <h3 class='mt-3 text-xl font-bold text-story-900'>區域複製</h3>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>擴展到校園體系、合作城市或聯合營運夥伴，形成穩定複製模型。</p>
+        </article>
+        <article class='glass rounded-3xl p-6 shadow-soft'>
+          <div class='text-sm font-semibold text-story-700'>Step 04</div>
+          <h3 class='mt-3 text-xl font-bold text-story-900'>品牌延展</h3>
+          <p class='mt-3 text-sm leading-7 text-slate-600'>延伸出版、聯名、成人體驗、講座、顧問與跨界內容合作。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class='mx-auto max-w-7xl px-4 py-10 lg:py-14'>
+      <div class='grid gap-6 lg:grid-cols-[1.1fr_.9fr]'>
+        <div class='rounded-[2rem] bg-story-900 p-8 text-white shadow-soft'>
+          <div class='section-title text-sm font-semibold uppercase text-story-200'>Why StoryARK</div>
+          <h2 class='mt-3 text-3xl font-bold'>我們不是只把內容做得好看，而是把內容做成可落地的系統。</h2>
+          <ul class='mt-6 space-y-3 text-white/85'>
+            <li>— 有現場感：能演、能帶、能讓孩子參與</li>
+            <li>— 有教學感：能接進課程、班級與師資系統</li>
+            <li>— 有品牌感：能被命名、包裝與長期合作</li>
+            <li>— 有延展性：能長成出版、授權、訓練與跨區複製</li>
+          </ul>
+        </div>
+        <div class='glass rounded-[2rem] p-8 shadow-soft'>
+          <div class='section-title text-sm font-semibold uppercase text-story-700'>Risk & Governance</div>
+          <h2 class='mt-3 text-3xl font-bold text-story-900'>合作時，我們同樣重視治理與品質。</h2>
+          <ul class='mt-6 space-y-3 text-slate-600'>
+            <li>— 兒少安全與教育場域規範</li>
+            <li>— 師資培訓與派師品質</li>
+            <li>— 品牌一致性與內容授權邏輯</li>
+            <li>— 跨城市合作的執行與成本節點</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id='contact' class='mx-auto max-w-7xl px-4 py-10 lg:py-16'>
+      <div class='glass rounded-[2.2rem] p-8 shadow-soft lg:p-10'>
+        <div class='grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end'>
+          <div>
+            <div class='section-title text-sm font-semibold uppercase text-story-700'>Contact</div>
+            <h2 class='mt-3 text-3xl font-bold text-story-900 lg:text-4xl'>想聊合作、課程導入、師訓、演出或品牌整合？</h2>
+            <p class='mt-4 max-w-2xl leading-8 text-slate-600'>這一版首頁已可作為 GitHub Pages 的正式品牌版雛形。後續還能再接上作品圖片、實際案例、聯絡表單與社群入口。</p>
+          </div>
+          <div class='grid gap-4 md:grid-cols-2'>
+            <div class='rounded-3xl bg-story-50 p-5'>
+              <div class='text-sm font-semibold text-story-700'>合作方向</div>
+              <p class='mt-2 text-sm leading-7 text-slate-600'>校園導入、品牌活動、教育顧問、出版策劃、演教員培訓</p>
+            </div>
+            <div class='rounded-3xl bg-story-50 p-5'>
+              <div class='text-sm font-semibold text-story-700'>網站下一步</div>
+              <p class='mt-2 text-sm leading-7 text-slate-600'>可再加入實績作品牆、合作表單、QA 與下載型簡報頁。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class='border-t border-white/70 bg-white/60'>
+    <div class='mx-auto flex max-w-7xl flex-col gap-2 px-4 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between'>
+      <div>© StoryARK 故事方舟 · Education, Theatre, Storytelling</div>
+      <div>Built as a GitHub Pages single-file homepage prototype.</div>
+    </div>
+  </footer>
+
+  <script>
+    const commonText = {fontFamily:'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif'};
+
+    const focusChart = echarts.init(document.getElementById('focusChart'));
+    focusChart.setOption({
+      tooltip:{trigger:'item'},
+      legend:{bottom:0,textStyle:{...commonText}},
+      series:[{
+        type:'pie',
+        radius:['42%','70%'],
+        center:['50%','46%'],
+        itemStyle:{borderColor:'#fff',borderWidth:4},
+        label:{formatter:'{b}\n{d}%'},
+        data:[
+          {name:'教育劇場',value:30},
+          {name:'英語表達',value:22},
+          {name:'SEL 情緒教育',value:18},
+          {name:'教師培訓',value:14},
+          {name:'出版 / 教材',value:10},
+          {name:'故事療癒',value:6}
+        ]
+      }]
+    });
+
+    const roleChart = echarts.init(document.getElementById('roleChart'));
+    roleChart.setOption({
+      tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+      grid:{left:90,right:20,top:10,bottom:20},
+      xAxis:{type:'value',max:100},
+      yAxis:{type:'category',data:['創辦 / 策展','演教員','師訓系統','技術統籌','市場合作','教材出版']},
+      series:[{type:'bar',barWidth:18,data:[96,88,82,68,73,71],itemStyle:{color:'#347654',borderRadius:[0,8,8,0]}}]
+    });
+
+    const growthChart = echarts.init(document.getElementById('growthChart'));
+    growthChart.setOption({
+      tooltip:{trigger:'axis'},
+      grid:{left:40,right:20,top:20,bottom:40},
+      xAxis:{type:'category',data:['內容建立','作品推出','模組整理','師訓擴張','合作試點','跨區複製']},
+      yAxis:{type:'value',max:100},
+      series:[{
+        type:'line',smooth:true,symbolSize:10,
+        data:[22,38,54,67,79,91],
+        lineStyle:{color:'#265d42',width:4},
+        itemStyle:{color:'#163728'},
+        areaStyle:{color:'rgba(67,143,104,.16)'}
+      }]
+    });
+
+    const coopChart = echarts.init(document.getElementById('coopChart'));
+    coopChart.setOption({
+      tooltip:{},
+      radar:{
+        radius:'62%',
+        indicator:[
+          {name:'教學可落地',max:100},
+          {name:'品牌辨識度',max:100},
+          {name:'合作複製性',max:100},
+          {name:'師訓支撐力',max:100},
+          {name:'IP延展性',max:100},
+          {name:'營運清晰度',max:100}
+        ]
+      },
+      series:[{
+        type:'radar',
+        data:[{name:'StoryARK',value:[90,88,83,79,87,76]}],
+        lineStyle:{color:'#347654'},
+        areaStyle:{color:'rgba(115,179,143,.24)'},
+        itemStyle:{color:'#1d4934'}
+      }]
+    });
+
+    window.addEventListener('resize',()=>[focusChart,roleChart,growthChart,coopChart].forEach(chart=>chart.resize()));
+  </script>
+</body>
+</html>
